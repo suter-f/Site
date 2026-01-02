@@ -1,7 +1,7 @@
-// Финальная дата (измените на нужную)
+// final date
 const finalDate = new Date('2026-10-22T22:17:00');
 
-// Функции для расчёта времени
+// func time remaining
 function getTimeRemaining() {
     const now = new Date();
     const diff = finalDate - now;
@@ -14,7 +14,7 @@ function getTimeRemaining() {
     };
 }
 
-// Обновление таймера
+// update Timer
 function updateTimer() {
     const t = getTimeRemaining();
     if (t.total <= 0) {
@@ -25,28 +25,28 @@ function updateTimer() {
         `${t.days.toString().padStart(2, '0')} : ${t.hours.toString().padStart(2, '0')} : ${t.minutes.toString().padStart(2, '0')} : ${t.seconds.toString().padStart(2, '0')}`;
 }
 
-// Проверка условий для подсказок
+// check conditions
 function checkHints() {
     const now = new Date();
     const diff = finalDate - now;
     const daysLeft = diff / (1000 * 60 * 60 * 24);
 
-    // 9 месяцев до финала (~270 дней)
+    // 9
     if (daysLeft <= 270 && daysLeft > 180) {
         document.getElementById('hint-1').style.opacity = '0.3';
     }
-    // 6 месяцев до финала (~180 дней)
+    // 6
     else if (daysLeft <= 180 && daysLeft > 90) {
         document.getElementById('hint-1').style.opacity = '0.5';
         document.getElementById('hint-2').style.opacity = '0.3';
     }
-    // 3 месяца до финала (~90 дней)
+    // 3 
     else if (daysLeft <= 90 && daysLeft > 0) {
         document.getElementById('hint-1').style.opacity = '0.7';
         document.getElementById('hint-2').style.opacity = '0.5';
         document.getElementById('hint-3').style.opacity = '0.3';
     }
-    // После финала — все подсказки видны
+    // final = delete
     else if (daysLeft <= 0) {
         document.getElementById('hint-1').style.opacity = '0.7';
         document.getElementById('hint-2').style.opacity = '0.7';
@@ -54,12 +54,12 @@ function checkHints() {
     }
 }
 
-// Обновляем таймер и подсказки каждую секунду
+// update timer and check hits
 setInterval(() => {
     updateTimer();
     checkHints();
 }, 1000);
 
-// Первоначальный вызов
+// call
 updateTimer();
 checkHints();
