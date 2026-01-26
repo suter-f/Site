@@ -37,14 +37,14 @@ function checkHints() {
     }
     // 6
     else if (daysLeft <= 180 && daysLeft > 90) {
-        document.getElementById('hint-1').style.opacity = '0.5';
-        document.getElementById('hint-2').style.opacity = '0.01';
+        document.getElementById('hint-1').style.opacity = '0.4';
+        document.getElementById('hint-2').style.opacity = '0.1';
     }
     // 3 
     else if (daysLeft <= 90 && daysLeft > 0) {
         document.getElementById('hint-1').style.opacity = '0.7';
-        document.getElementById('hint-2').style.opacity = '0.5';
-        document.getElementById('hint-3').style.opacity = '0.3';
+        document.getElementById('hint-2').style.opacity = '0.4';
+        document.getElementById('hint-3').style.opacity = '0.1';
     }
     // final = delete
     else if (daysLeft <= 0) {
