@@ -33,7 +33,7 @@ function checkHints() {
 
     // 9
     if (daysLeft <= 270 && daysLeft > 180) {
-        document.getElementById('hint-1').style.opacity = '0.3';
+        document.getElementById('hint-1').style.opacity = '0.03';
     }
     // 6
     else if (daysLeft <= 180 && daysLeft > 90) {
