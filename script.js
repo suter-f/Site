@@ -33,12 +33,12 @@ function checkHints() {
 
     // 9
     if (daysLeft <= 270 && daysLeft > 180) {
-        document.getElementById('hint-1').style.opacity = '0';
+        document.getElementById('hint-1').style.opacity = '0.1';
     }
     // 6
     else if (daysLeft <= 180 && daysLeft > 90) {
         document.getElementById('hint-1').style.opacity = '0.5';
-        document.getElementById('hint-2').style.opacity = '0.3';
+        document.getElementById('hint-2').style.opacity = '0.01';
     }
     // 3 
     else if (daysLeft <= 90 && daysLeft > 0) {
